@@ -42,6 +42,7 @@ public class SimpleThreadCreateManageExamples {
 				for (int i = 0; i < threads.length; i++) {
 					if (threads[i].getState().compareTo(statuses[i]) != 0) {
 						writeToFile(pw, threads[i], statuses[i]);
+						statuses[i] = threads[i].getState();
 					}
 				}
 				
